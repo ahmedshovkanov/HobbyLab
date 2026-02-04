@@ -12,6 +12,7 @@ struct AddSessionView: View {
     @State private var notes = ""
     @State private var tags = ""
     @State private var selectedDate = Date()
+    @State private var viSessionAdded = false
     
     var body: some View {
         Form {
@@ -66,17 +67,17 @@ struct AddSessionView: View {
                     .listRowBackground(Color.hobbyLabPrimary)
                     .disabled(hours == 0 && minutes == 0)
                 }
-        }
-        .navigationTitle("Log Session")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Cancel") {
-                    isPresented = false
+            }
+            .navigationTitle("Log Session")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        isPresented = false
+                    }
                 }
             }
         }
-    }
     
     private func calculateXP() -> Int {
         let duration = TimeInterval((hours * 3600) + (minutes * 60))
@@ -97,6 +98,7 @@ struct AddSessionView: View {
         session.date = selectedDate
         
         viewModel.addSession(session, to: hobbyId, projectId: projectId)
+        viSessionAdded = true
         isPresented = false
     }
 }

@@ -3,6 +3,7 @@ import SwiftUI
 struct AddTaskView: View {
     @EnvironmentObject var viewModel: HobbyViewModel
     @Binding var isPresented: Bool
+    @Binding var isTaskAdded: Bool
     
     let hobbyId: UUID
     let projectId: UUID
@@ -44,17 +45,17 @@ struct AddTaskView: View {
                     .listRowBackground(Color.hobbyLabPrimary)
                     .disabled(title.isEmpty)
                 }
-        }
-        .navigationTitle("New Task")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Cancel") {
-                    isPresented = false
+            }
+            .navigationTitle("New Task")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        isPresented = false
+                    }
                 }
             }
         }
-    }
     
     private func addTask() {
         let task = ProjectTask(
@@ -64,11 +65,12 @@ struct AddTaskView: View {
             priority: priority
         )
         viewModel.addTask(task, to: projectId, in: hobbyId)
+        isTaskAdded = true
         isPresented = false
     }
 }
 
 #Preview {
-    AddTaskView(isPresented: .constant(true), hobbyId: UUID(), projectId: UUID())
+    AddTaskView(isPresented: .constant(true), isTaskAdded: .constant(false), hobbyId: UUID(), projectId: UUID())
         .environmentObject(HobbyViewModel())
 }

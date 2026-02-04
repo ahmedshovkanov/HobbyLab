@@ -6,7 +6,7 @@ struct CalendarView: View {
     @State private var currentMonth = Date()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
                     // Month Selector

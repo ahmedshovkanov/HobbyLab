@@ -55,19 +55,24 @@ struct ProgressRing: View {
     var lineWidth: CGFloat = 8
     var color: Color = .hobbyLabPrimary
     
+    private var safeProgress: Double {
+        let value = progress.isNaN || progress.isInfinite ? 0 : progress
+        return min(max(value, 0), 1)
+    }
+    
     var body: some View {
         ZStack {
             Circle()
                 .stroke(color.opacity(0.2), lineWidth: lineWidth)
             
             Circle()
-                .trim(from: 0, to: progress)
+                .trim(from: 0, to: safeProgress)
                 .stroke(
                     color,
                     style: StrokeStyle(lineWidth: lineWidth, lineCap: .round)
                 )
                 .rotationEffect(.degrees(-90))
-                .animation(.easeInOut, value: progress)
+                .animation(.easeInOut, value: safeProgress)
         }
     }
 }

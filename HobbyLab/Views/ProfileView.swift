@@ -5,7 +5,7 @@ struct ProfileView: View {
     @State private var showingEditProfile = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
                     // Profile Header

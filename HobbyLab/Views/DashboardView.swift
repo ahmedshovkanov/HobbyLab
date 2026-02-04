@@ -5,7 +5,7 @@ struct DashboardView: View {
     @State private var showingAddHobby = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
                     // Welcome Section

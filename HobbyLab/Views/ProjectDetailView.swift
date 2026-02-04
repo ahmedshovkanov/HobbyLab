@@ -7,6 +7,7 @@ struct ProjectDetailView: View {
     
     @State private var showingAddTask = false
     @State private var showingAddSession = false
+    @State private var isTaskAdded = false
     
     var currentProject: Project {
         if let hobby = viewModel.hobbies.first(where: { $0.id == hobbyId }),
@@ -37,12 +38,16 @@ struct ProjectDetailView: View {
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.large)
         .sheet(isPresented: $showingAddTask) {
-            AddTaskView(isPresented: $showingAddTask, hobbyId: hobbyId, projectId: project.id)
-                .environmentObject(viewModel)
+            NavigationStack {
+                AddTaskView(isPresented: $showingAddTask, isTaskAdded: $isTaskAdded, hobbyId: hobbyId, projectId: project.id)
+                    .environmentObject(viewModel)
+            }
         }
         .sheet(isPresented: $showingAddSession) {
-            AddSessionView(isPresented: $showingAddSession, hobbyId: hobbyId, projectId: project.id)
-                .environmentObject(viewModel)
+            NavigationStack {
+                AddSessionView(isPresented: $showingAddSession, hobbyId: hobbyId, projectId: project.id)
+                    .environmentObject(viewModel)
+            }
         }
     }
     
@@ -234,7 +239,7 @@ struct TaskRow: View {
 }
 
 #Preview {
-    NavigationView {
+    NavigationStack {
         ProjectDetailView(
             hobbyId: UUID(),
             project: Project(hobbyId: UUID(), name: "Learn SwiftUI", description: "Master SwiftUI basics")

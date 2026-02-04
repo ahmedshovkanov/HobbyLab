@@ -146,7 +146,7 @@ struct HobbyDetailView: View {
                 )
             } else {
                 ForEach(hobby.projects) { project in
-                    NavigationLink(destination: ProjectDetailView(hobbyId: hobby.id, project: project)) {
+                    NavigationLink(destination: ProjectDetailView(hobbyId: hobby.id, project: project).environmentObject(viewModel)) {
                         ProjectCardView(project: project, hobbyColor: hobby.color)
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -346,7 +346,7 @@ struct SessionDetailRow: View {
 }
 
 #Preview {
-    NavigationView {
+    NavigationStack {
         HobbyDetailView(hobby: Hobby(name: "Painting", category: .art))
             .environmentObject(HobbyViewModel())
     }
