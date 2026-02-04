@@ -1,13 +1,39 @@
 import Foundation
 import SwiftUI
+import Combine
 
 class HobbyViewModel: ObservableObject {
-    @Published var hobbies: [Hobby] = []
-    @Published var userProfile: UserProfile
+    @Published var hobbies: [Hobby] = [] {
+        didSet {
+            saveData()
+        }
+    }
+    
+    @Published var userProfile: UserProfile {
+        didSet {
+            saveData()
+        }
+    }
+    
+    private let persistence = PersistenceManager.shared
     
     init() {
-        self.userProfile = UserProfile(name: "Hobbyist", avatarEmoji: "🎨")
-        loadSampleData()
+        // Load saved data or create default profile
+        if let savedProfile = persistence.loadUserProfile() {
+            self.userProfile = savedProfile
+        } else {
+            self.userProfile = UserProfile(name: "Hobbyist", avatarEmoji: "🎨")
+        }
+        
+        // Load saved hobbies
+        self.hobbies = persistence.loadHobbies()
+    }
+    
+    // MARK: - Persistence
+    
+    private func saveData() {
+        persistence.saveHobbies(hobbies)
+        persistence.saveUserProfile(userProfile)
     }
     
     // MARK: - Hobby Management
@@ -106,8 +132,6 @@ class HobbyViewModel: ObservableObject {
         }
         return sessions
     }
-    
-    // MARK: - Task Management
     
     func addTask(_ task: ProjectTask, to projectId: UUID, in hobbyId: UUID) {
         if let hobbyIndex = hobbies.firstIndex(where: { $0.id == hobbyId }),
@@ -224,15 +248,5 @@ class HobbyViewModel: ObservableObject {
         newAchievement.isUnlocked = true
         newAchievement.unlockedDate = Date()
         userProfile.achievements.append(newAchievement)
-    }
-    
-    // MARK: - Sample Data
-    
-    func loadSampleData() {
-        let painting = Hobby(name: "Painting", category: .art, color: "#FF6B9D", icon: "paintbrush.fill")
-        let coding = Hobby(name: "Swift Development", category: .coding, color: "#55BEEB", icon: "chevron.left.forwardslash.chevron.right")
-        
-        hobbies.append(painting)
-        hobbies.append(coding)
     }
 }

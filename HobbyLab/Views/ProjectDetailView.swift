@@ -37,10 +37,12 @@ struct ProjectDetailView: View {
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.large)
         .sheet(isPresented: $showingAddTask) {
-            AddTaskView(hobbyId: hobbyId, projectId: project.id)
+            AddTaskView(isPresented: $showingAddTask, hobbyId: hobbyId, projectId: project.id)
+                .environmentObject(viewModel)
         }
         .sheet(isPresented: $showingAddSession) {
-            AddSessionView(hobbyId: hobbyId, projectId: project.id)
+            AddSessionView(isPresented: $showingAddSession, hobbyId: hobbyId, projectId: project.id)
+                .environmentObject(viewModel)
         }
     }
     

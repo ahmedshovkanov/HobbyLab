@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AddTaskView: View {
     @EnvironmentObject var viewModel: HobbyViewModel
-    @Environment(\.dismiss) var dismiss
+    @Binding var isPresented: Bool
     
     let hobbyId: UUID
     let projectId: UUID
@@ -12,8 +12,7 @@ struct AddTaskView: View {
     @State private var priority: TaskPriority = .medium
     
     var body: some View {
-        NavigationView {
-            Form {
+        Form {
                 Section(header: Text("Task Details")) {
                     TextField("Task Title", text: $title)
                     
@@ -45,14 +44,13 @@ struct AddTaskView: View {
                     .listRowBackground(Color.hobbyLabPrimary)
                     .disabled(title.isEmpty)
                 }
-            }
-            .navigationTitle("New Task")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
-                        dismiss()
-                    }
+        }
+        .navigationTitle("New Task")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Cancel") {
+                    isPresented = false
                 }
             }
         }
@@ -66,11 +64,11 @@ struct AddTaskView: View {
             priority: priority
         )
         viewModel.addTask(task, to: projectId, in: hobbyId)
-        dismiss()
+        isPresented = false
     }
 }
 
 #Preview {
-    AddTaskView(hobbyId: UUID(), projectId: UUID())
+    AddTaskView(isPresented: .constant(true), hobbyId: UUID(), projectId: UUID())
         .environmentObject(HobbyViewModel())
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AddSessionView: View {
     @EnvironmentObject var viewModel: HobbyViewModel
-    @Environment(\.dismiss) var dismiss
+    @Binding var isPresented: Bool
     
     let hobbyId: UUID
     var projectId: UUID?
@@ -14,8 +14,7 @@ struct AddSessionView: View {
     @State private var selectedDate = Date()
     
     var body: some View {
-        NavigationView {
-            Form {
+        Form {
                 Section(header: Text("Duration")) {
                     HStack {
                         Picker("Hours", selection: $hours) {
@@ -67,14 +66,13 @@ struct AddSessionView: View {
                     .listRowBackground(Color.hobbyLabPrimary)
                     .disabled(hours == 0 && minutes == 0)
                 }
-            }
-            .navigationTitle("Log Session")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
-                        dismiss()
-                    }
+        }
+        .navigationTitle("Log Session")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Cancel") {
+                    isPresented = false
                 }
             }
         }
@@ -99,11 +97,11 @@ struct AddSessionView: View {
         session.date = selectedDate
         
         viewModel.addSession(session, to: hobbyId, projectId: projectId)
-        dismiss()
+        isPresented = false
     }
 }
 
 #Preview {
-    AddSessionView(hobbyId: UUID())
+    AddSessionView(isPresented: .constant(true), hobbyId: UUID())
         .environmentObject(HobbyViewModel())
 }
