@@ -61,7 +61,7 @@ struct DashboardView: View {
     }
     
     private var quickStatsSection: some View {
-        HStack(spacing: 12) {
+        HStack(alignment: .top, spacing: 12) {
             StatCard(
                 title: "Level",
                 value: "\(viewModel.userProfile.level)",
@@ -160,10 +160,13 @@ struct StatCard: View {
             Text(value)
                 .font(.title3)
                 .fontWeight(.bold)
+                .fixedSize()
             
             Text(title)
                 .font(.caption)
                 .foregroundColor(.hobbyLabSecondaryText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -270,6 +273,7 @@ struct EmptyStateView: View {
                 .foregroundColor(.hobbyLabSecondaryText)
                 .multilineTextAlignment(.center)
         }
+        .frame(maxWidth: .infinity)
         .padding(40)
         .cardStyle()
     }
