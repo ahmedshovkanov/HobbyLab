@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0673401A2F3A784300ADC743 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		06E99BE02F327511007D5038 /* HobbyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BED2F327513007D5038 /* HobbyLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbyLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BF72F327513007D5038 /* HobbyLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbyLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +74,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0673401D2F3A784300ADC743 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		06E99BD72F327511007D5038 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +214,10 @@
 				{
 					ProductGroup = 06E99DCD2F328BB4007D5038 /* Products */;
 					ProjectRef = 06E99DCA2F328BB4007D5038 /* HobbyLab.xcodeproj */;
+				},
+				{
+					ProductGroup = 0673401D2F3A784300ADC743 /* Products */;
+					ProjectRef = 0673401A2F3A784300ADC743 /* HobbyLab.xcodeproj */;
 				},
 			);
 			projectRoot = "";

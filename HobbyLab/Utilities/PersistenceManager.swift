@@ -11,33 +11,43 @@ class PersistenceManager {
     // MARK: - Hobbies
     
     func saveHobbies(_ hobbies: [Hobby]) {
-        if let encoded = try? JSONEncoder().encode(hobbies) {
-            UserDefaults.standard.set(encoded, forKey: hobbiesKey)
-        }
+        // Temporarily disabled for screenshot mode
+        // if let encoded = try? JSONEncoder().encode(hobbies) {
+        //     UserDefaults.standard.set(encoded, forKey: hobbiesKey)
+        // }
     }
     
     func loadHobbies() -> [Hobby] {
-        guard let data = UserDefaults.standard.data(forKey: hobbiesKey),
-              let hobbies = try? JSONDecoder().decode([Hobby].self, from: data) else {
-            return []
-        }
-        return hobbies
+        // Return pregenerated sample data for screenshots
+        return SampleData.generateSampleHobbies()
+        
+        // Original code (disabled for screenshots):
+        // guard let data = UserDefaults.standard.data(forKey: hobbiesKey),
+        //       let hobbies = try? JSONDecoder().decode([Hobby].self, from: data) else {
+        //     return []
+        // }
+        // return hobbies
     }
     
     // MARK: - User Profile
     
     func saveUserProfile(_ profile: UserProfile) {
-        if let encoded = try? JSONEncoder().encode(profile) {
-            UserDefaults.standard.set(encoded, forKey: userProfileKey)
-        }
+        // Temporarily disabled for screenshot mode
+        // if let encoded = try? JSONEncoder().encode(profile) {
+        //     UserDefaults.standard.set(encoded, forKey: userProfileKey)
+        // }
     }
     
     func loadUserProfile() -> UserProfile? {
-        guard let data = UserDefaults.standard.data(forKey: userProfileKey),
-              let profile = try? JSONDecoder().decode(UserProfile.self, from: data) else {
-            return nil
-        }
-        return profile
+        // Return pregenerated sample data for screenshots
+        return SampleData.generateSampleUserProfile()
+        
+        // Original code (disabled for screenshots):
+        // guard let data = UserDefaults.standard.data(forKey: userProfileKey),
+        //       let profile = try? JSONDecoder().decode(UserProfile.self, from: data) else {
+        //     return nil
+        // }
+        // return profile
     }
     
     // MARK: - Clear All Data
