@@ -23,7 +23,7 @@ struct DashboardView: View {
                 .padding()
             }
             .background(Color.hobbyLabSecondaryBackground)
-            .navigationTitle("HobbyLab")
+            .navigationTitle("ArctiLab")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { showingAddHobby = true }) {
