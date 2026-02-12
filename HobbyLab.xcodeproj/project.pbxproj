@@ -52,6 +52,11 @@
 		0685C4A52F3E6B45009E015B /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		0685C4C72F3E6B45009E015B /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		0685C4F82F3E6E9C009E015B /* notifications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notifications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0685C53C2F3E72BF009E015B /* FEATURES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FEATURES.md; sourceTree = "<group>"; };
+		0685C53D2F3E72BF009E015B /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		0685C53E2F3E72BF009E015B /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
+		0685C53F2F3E72BF009E015B /* QUICKSTART.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICKSTART.md; sourceTree = "<group>"; };
+		0685C5402F3E72BF009E015B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0695AA4C2F3E5CE6001C051E /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		06E99BE02F327511007D5038 /* HobbyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BED2F327513007D5038 /* HobbyLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbyLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,20 +72,59 @@
 			);
 			target = 0685C4F72F3E6E9C009E015B /* notifications */;
 		};
-		0695AA702F3E5D00001C051E /* Exceptions for "." folder in "HobbyLab" target */ = {
+		0685C5BC2F3E72C7009E015B /* Exceptions for "Models" folder in "HobbyLab" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				.github/workflows/ios_build.yml,
-				.github/workflows/ios_generate_certs.yml,
-				.github/workflows/ios_init_ci.yml,
-				fastlane/Appfile,
-				fastlane/Deliverfile,
-				fastlane/Fastfile,
-				FEATURES.md,
-				Gemfile,
-				notifications/Info.plist,
-				QUICKSTART.md,
-				README.md,
+				Hobby.swift,
+				Idea.swift,
+				Project.swift,
+				ProjectTask.swift,
+				Session.swift,
+				UserProfile.swift,
+			);
+			target = 06E99BDF2F327511007D5038 /* HobbyLab */;
+		};
+		0685C5BD2F3E72C7009E015B /* Exceptions for "notifications" folder in "HobbyLab" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NotificationService.swift,
+			);
+			target = 06E99BDF2F327511007D5038 /* HobbyLab */;
+		};
+		0685C5BE2F3E72C7009E015B /* Exceptions for "Utilities" folder in "HobbyLab" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ColorExtension.swift,
+				DateExtension.swift,
+				PersistenceManager.swift,
+				ViewModifiers.swift,
+			);
+			target = 06E99BDF2F327511007D5038 /* HobbyLab */;
+		};
+		0685C5BF2F3E72C7009E015B /* Exceptions for "ViewModels" folder in "HobbyLab" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HobbyViewModel.swift,
+			);
+			target = 06E99BDF2F327511007D5038 /* HobbyLab */;
+		};
+		0685C5C02F3E72C7009E015B /* Exceptions for "Views" folder in "HobbyLab" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AddHobbyView.swift,
+				AddIdeaView.swift,
+				AddProjectView.swift,
+				AddSessionView.swift,
+				AddTaskView.swift,
+				AnalyticsView.swift,
+				CalendarView.swift,
+				DashboardView.swift,
+				HobbyDetailView.swift,
+				IdeaBankView.swift,
+				MainTabView.swift,
+				OnboardingView.swift,
+				ProfileView.swift,
+				ProjectDetailView.swift,
 			);
 			target = 06E99BDF2F327511007D5038 /* HobbyLab */;
 		};
@@ -95,12 +139,59 @@
 			path = notifications;
 			sourceTree = "<group>";
 		};
-		06E99BE22F327511007D5038 /* . */ = {
+		0685C5752F3E72C7009E015B /* .github */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = .github;
+			sourceTree = "<group>";
+		};
+		0685C5792F3E72C7009E015B /* fastlane */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = fastlane;
+			sourceTree = "<group>";
+		};
+		0685C57E2F3E72C7009E015B /* HobbyLab */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HobbyLab;
+			sourceTree = "<group>";
+		};
+		0685C5852F3E72C7009E015B /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0695AA702F3E5D00001C051E /* Exceptions for "." folder in "HobbyLab" target */,
+				0685C5BC2F3E72C7009E015B /* Exceptions for "Models" folder in "HobbyLab" target */,
 			);
-			path = .;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0685C5882F3E72C7009E015B /* notifications */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0685C5BD2F3E72C7009E015B /* Exceptions for "notifications" folder in "HobbyLab" target */,
+			);
+			path = notifications;
+			sourceTree = "<group>";
+		};
+		0685C58D2F3E72C7009E015B /* Utilities */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0685C5BE2F3E72C7009E015B /* Exceptions for "Utilities" folder in "HobbyLab" target */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0685C58F2F3E72C7009E015B /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0685C5BF2F3E72C7009E015B /* Exceptions for "ViewModels" folder in "HobbyLab" target */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0685C59E2F3E72C7009E015B /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0685C5C02F3E72C7009E015B /* Exceptions for "Views" folder in "HobbyLab" target */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		06E99BF02F327513007D5038 /* HobbyLabTests */ = {
@@ -165,11 +256,23 @@
 		06E99BD72F327511007D5038 = {
 			isa = PBXGroup;
 			children = (
-				06E99BE22F327511007D5038 /* . */,
 				06E99BF02F327513007D5038 /* HobbyLabTests */,
 				06E99BFA2F327513007D5038 /* HobbyLabUITests */,
 				0685C4F92F3E6E9C009E015B /* notifications */,
 				06E99BE12F327511007D5038 /* Products */,
+				0685C5752F3E72C7009E015B /* .github */,
+				0685C5792F3E72C7009E015B /* fastlane */,
+				0685C57E2F3E72C7009E015B /* HobbyLab */,
+				0685C5852F3E72C7009E015B /* Models */,
+				0685C5882F3E72C7009E015B /* notifications */,
+				0685C58D2F3E72C7009E015B /* Utilities */,
+				0685C58F2F3E72C7009E015B /* ViewModels */,
+				0685C59E2F3E72C7009E015B /* Views */,
+				0685C53C2F3E72BF009E015B /* FEATURES.md */,
+				0685C53D2F3E72BF009E015B /* Gemfile */,
+				0685C53E2F3E72BF009E015B /* HobbyLab.xcodeproj */,
+				0685C53F2F3E72BF009E015B /* QUICKSTART.md */,
+				0685C5402F3E72BF009E015B /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,7 +332,7 @@
 				0685C4FE2F3E6E9C009E015B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				06E99BE22F327511007D5038 /* . */,
+				0685C57E2F3E72C7009E015B /* HobbyLab */,
 			);
 			name = HobbyLab;
 			packageProductDependencies = (
