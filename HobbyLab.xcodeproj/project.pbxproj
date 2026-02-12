@@ -51,6 +51,7 @@
 /* Begin PBXFileReference section */
 		06B63BAC2F3E51DD00D536C7 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		06B63BD42F3E51F300D536C7 /* notifications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notifications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E41BDE2F3E53F600A4ED30 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		06E99BE02F327511007D5038 /* HobbyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BED2F327513007D5038 /* HobbyLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbyLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BF72F327513007D5038 /* HobbyLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbyLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +137,11 @@
 
 /* Begin PBXGroup section */
 		06B63BAF2F3E51DD00D536C7 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06E41BE12F3E53F600A4ED30 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
@@ -306,6 +312,10 @@
 					ProjectRef = 06E99DCA2F328BB4007D5038 /* HobbyLab.xcodeproj */;
 				},
 				{
+					ProductGroup = 06E41BE12F3E53F600A4ED30 /* Products */;
+					ProjectRef = 06E41BDE2F3E53F600A4ED30 /* HobbyLab.xcodeproj */;
+				},
+				{
 					ProductGroup = 06B63BAF2F3E51DD00D536C7 /* Products */;
 					ProjectRef = 06B63BAC2F3E51DD00D536C7 /* HobbyLab.xcodeproj */;
 				},
@@ -404,6 +414,7 @@
 		06B63BDD2F3E51F300D536C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -430,6 +441,7 @@
 		06B63BDE2F3E51F300D536C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
