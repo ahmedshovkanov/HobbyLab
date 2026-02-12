@@ -69,7 +69,18 @@
 		06B63BE62F3E521300D536C7 /* Exceptions for "." folder in "HobbyLab" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				.github/workflows/ios_build.yml,
+				.github/workflows/ios_generate_certs.yml,
+				.github/workflows/ios_init_ci.yml,
+				fastlane/Appfile,
+				fastlane/Deliverfile,
+				fastlane/Fastfile,
+				FEATURES.md,
+				Gemfile,
 				notifications/Info.plist,
+				Podfile,
+				QUICKSTART.md,
+				README.md,
 			);
 			target = 06E99BDF2F327511007D5038 /* HobbyLab */;
 		};
