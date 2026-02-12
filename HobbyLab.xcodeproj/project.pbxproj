@@ -66,7 +66,7 @@
 			);
 			target = 06B63BD32F3E51F300D536C7 /* notifications */;
 		};
-		06B63BE62F3E521300D536C7 /* Exceptions for "." folder in "HobbyLab" target */ = {
+		06B63BE62F3E521300D536C7 /* Exceptions for "HobbyLab" folder in "HobbyLab" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				.github/workflows/ios_build.yml,
@@ -95,11 +95,12 @@
 			path = notifications;
 			sourceTree = "<group>";
 		};
-		06E99BE22F327511007D5038 /* . */ = {
+		06E99BE22F327511007D5038 /* HobbyLab */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				06B63BE62F3E521300D536C7 /* Exceptions for "." folder in "HobbyLab" target */,
+				06B63BE62F3E521300D536C7 /* Exceptions for "HobbyLab" folder in "HobbyLab" target */,
 			);
+			name = HobbyLab;
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -160,7 +161,7 @@
 		06E99BD72F327511007D5038 = {
 			isa = PBXGroup;
 			children = (
-				06E99BE22F327511007D5038 /* . */,
+				06E99BE22F327511007D5038 /* HobbyLab */,
 				06E99BF02F327513007D5038 /* HobbyLabTests */,
 				06E99BFA2F327513007D5038 /* HobbyLabUITests */,
 				06B63BD52F3E51F300D536C7 /* notifications */,
@@ -224,7 +225,7 @@
 				06B63BDA2F3E51F300D536C7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				06E99BE22F327511007D5038 /* . */,
+				06E99BE22F327511007D5038 /* HobbyLab */,
 			);
 			name = HobbyLab;
 			packageProductDependencies = (
