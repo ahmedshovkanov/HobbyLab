@@ -1,8 +1,8 @@
-# HobbyLab - Quick Start Guide
+# ArctiLab - Quick Start Guide
 
-## 🎨 What is HobbyLab?
+## 🎨 What is ArctiLab?
 
-HobbyLab is your personal hobby tracking companion that helps you organize, track, and grow your passions. Whether you're learning to paint, practicing guitar, or building coding projects, HobbyLab makes it easy to stay motivated and see your progress.
+ArctiLab is your personal hobby tracking companion that helps you organize, track, and grow your passions. Whether you're learning to paint, practicing guitar, or building coding projects, ArctiLab makes it easy to stay motivated and see your progress.
 
 ## ✨ Key Features at a Glance
 
@@ -96,7 +96,7 @@ All your data includes:
 
 ## 🎉 Ready to Start?
 
-Open HobbyLab and begin your journey to becoming a well-rounded hobbyist. Track your passions, celebrate your progress, and turn your interests into lasting skills!
+Open ArctiLab and begin your journey to becoming a well-rounded hobbyist. Track your passions, celebrate your progress, and turn your interests into lasting skills!
 
 ---
 
