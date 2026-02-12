@@ -1,4 +1,4 @@
-# ArctiLab - Feature Implementation Checklist
+# HobbyLab - Feature Implementation Checklist
 
 ## ✅ Core Features - COMPLETE
 

@@ -1,6 +1,6 @@
 //
-//  ArctiLabApp.swift
-//  ArctiLab
+//  HobbyLabApp.swift
+//  HobbyLab
 //
 //  Created by John Sorren on 03.02.2026.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ArctiLabApp: App {
+struct HobbyLabApp: App {
     @StateObject private var viewModel = HobbyViewModel()
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     

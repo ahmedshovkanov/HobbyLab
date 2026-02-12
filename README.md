@@ -1,10 +1,10 @@
-# ArctiLab
+# HobbyLab
 
 **Tagline:** Plan, track, and grow your hobbies — all in one place.
 
 ## Overview
 
-ArctiLab is a beautifully designed habit and project tracker for hobbyists. It helps users organize, log, and visualize their progress across multiple hobbies — from painting and coding to gardening and music. With session tracking, project management, progress visuals, and light gamification, ArctiLab turns casual interests into meaningful journeys.
+HobbyLab is a beautifully designed habit and project tracker for hobbyists. It helps users organize, log, and visualize their progress across multiple hobbies — from painting and coding to gardening and music. With session tracking, project management, progress visuals, and light gamification, HobbyLab turns casual interests into meaningful journeys.
 
 ## Design
 

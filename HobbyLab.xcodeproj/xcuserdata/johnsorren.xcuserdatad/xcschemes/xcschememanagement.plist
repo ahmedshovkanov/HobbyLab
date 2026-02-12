@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ArctiLab.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>HobbyLab.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,20 +12,7 @@
 		<key>notifications.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>06A023C92F3E406A008564C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>06E99BDF2F327511007D5038</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
