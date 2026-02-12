@@ -60,7 +60,7 @@ struct OnboardingView: View {
             
             // Title & Tagline
             VStack(spacing: 12) {
-                Text("HobbyLab")
+                Text("ArctiLab")
                     .font(.system(size: 42, weight: .bold))
                     .foregroundColor(.hobbyLabText)
                 
