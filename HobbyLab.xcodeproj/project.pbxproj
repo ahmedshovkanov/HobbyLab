@@ -6,18 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		06A023D12F3E406A008564C0 /* notifications.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 06A023CA2F3E406A008564C0 /* notifications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
-		06A023CF2F3E406A008564C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 06E99BD82F327511007D5038 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 06A023C92F3E406A008564C0;
-			remoteInfo = notifications;
-		};
 		06E99BEE2F327513007D5038 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 06E99BD82F327511007D5038 /* Project object */;
@@ -41,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				06A023D12F3E406A008564C0 /* notifications.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,34 +38,16 @@
 
 /* Begin PBXFileReference section */
 		06557C822F3D5AE900593F63 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
+		066B70EF2F3E4B6C000CDBC7 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		0673401A2F3A784300ADC743 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 		06A023982F3E3CDD008564C0 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
-		06A023CA2F3E406A008564C0 /* notifications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notifications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BE02F327511007D5038 /* ArctiLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArctiLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BED2F327513007D5038 /* ArctiLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArctiLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99BF72F327513007D5038 /* ArctiLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArctiLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E99DCA2F328BB4007D5038 /* HobbyLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HobbyLab.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		06A023D52F3E406A008564C0 /* Exceptions for "notifications" folder in "notifications" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 06A023C92F3E406A008564C0 /* notifications */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		06A023CB2F3E406A008564C0 /* notifications */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				06A023D52F3E406A008564C0 /* Exceptions for "notifications" folder in "notifications" target */,
-			);
-			path = notifications;
-			sourceTree = "<group>";
-		};
 		06E99BE22F327511007D5038 /* . */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = .;
@@ -96,13 +66,6 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06A023C72F3E406A008564C0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		06E99BDD2F327511007D5038 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +95,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		066B70F32F3E4B6C000CDBC7 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0673401D2F3A784300ADC743 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
@@ -148,7 +116,6 @@
 				06E99BE22F327511007D5038 /* . */,
 				06E99BF02F327513007D5038 /* HobbyLabTests */,
 				06E99BFA2F327513007D5038 /* HobbyLabUITests */,
-				06A023CB2F3E406A008564C0 /* notifications */,
 				06E99BE12F327511007D5038 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,7 +126,6 @@
 				06E99BE02F327511007D5038 /* ArctiLab.app */,
 				06E99BED2F327513007D5038 /* ArctiLabTests.xctest */,
 				06E99BF72F327513007D5038 /* ArctiLabUITests.xctest */,
-				06A023CA2F3E406A008564C0 /* notifications.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,28 +138,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		06A023C92F3E406A008564C0 /* notifications */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 06A023D62F3E406A008564C0 /* Build configuration list for PBXNativeTarget "notifications" */;
-			buildPhases = (
-				06A023C62F3E406A008564C0 /* Sources */,
-				06A023C72F3E406A008564C0 /* Frameworks */,
-				06A023C82F3E406A008564C0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				06A023CB2F3E406A008564C0 /* notifications */,
-			);
-			name = notifications;
-			packageProductDependencies = (
-			);
-			productName = notifications;
-			productReference = 06A023CA2F3E406A008564C0 /* notifications.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		06E99BDF2F327511007D5038 /* ArctiLab */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06E99C012F327513007D5038 /* Build configuration list for PBXNativeTarget "ArctiLab" */;
@@ -206,7 +150,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				06A023D02F3E406A008564C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				06E99BE22F327511007D5038 /* . */,
@@ -274,9 +217,6 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					06A023C92F3E406A008564C0 = {
-						CreatedOnToolsVersion = 16.4;
-					};
 					06E99BDF2F327511007D5038 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -319,25 +259,21 @@
 					ProductGroup = 06A0239C2F3E3CDD008564C0 /* Products */;
 					ProjectRef = 06A023982F3E3CDD008564C0 /* HobbyLab.xcodeproj */;
 				},
+				{
+					ProductGroup = 066B70F32F3E4B6C000CDBC7 /* Products */;
+					ProjectRef = 066B70EF2F3E4B6C000CDBC7 /* HobbyLab.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				06E99BDF2F327511007D5038 /* ArctiLab */,
 				06E99BEC2F327513007D5038 /* ArctiLabTests */,
 				06E99BF62F327513007D5038 /* ArctiLabUITests */,
-				06A023C92F3E406A008564C0 /* notifications */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		06A023C82F3E406A008564C0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		06E99BDE2F327511007D5038 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,13 +298,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		06A023C62F3E406A008564C0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		06E99BDC2F327511007D5038 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,11 +322,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		06A023D02F3E406A008564C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 06A023C92F3E406A008564C0 /* notifications */;
-			targetProxy = 06A023CF2F3E406A008564C0 /* PBXContainerItemProxy */;
-		};
 		06E99BEF2F327513007D5038 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 06E99BDF2F327511007D5038 /* ArctiLab */;
@@ -411,70 +335,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06A023D32F3E406A008564C0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = notifications/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = notifications;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.darrell.arctilab.notifications;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		06A023D42F3E406A008564C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = notifications/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = notifications;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.darrell.arctilab.notifications;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
 		06E99BFF2F327513007D5038 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -737,15 +597,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06A023D62F3E406A008564C0 /* Build configuration list for PBXNativeTarget "notifications" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				06A023D32F3E406A008564C0 /* Debug */,
-				06A023D42F3E406A008564C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		06E99BDB2F327511007D5038 /* Build configuration list for PBXProject "HobbyLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
